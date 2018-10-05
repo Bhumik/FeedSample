@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.finalhints.mymandirdemo.widgets.HeaderUserView
+        android:id="@+id/clHeaderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvFeedPrimaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        tools:text="SACCHI PER MOTI BAATIEN" />
+
+    <com.finalhints.mymandirdemo.widgets.MultiImageView
+        android:id="@+id/ivFeedImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#c6c6c6"
+        android:minHeight="120dp"
+        app:srcCompat="@drawable/placeholder_noimage" />
+
+    <TextView
+        android:id="@+id/tvFeedSecondaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="*ऐ आईने मुझे भी दे-दे जरा सा इल्म चेहरे बदलने का ..*\n\n*आ जाए मुझमें भी हुनर जमाने के साथ चलने का..!" />
+
+    <com.finalhints.mymandirdemo.widgets.ActionLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <View
+        android:id="@+id/tagDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#c6c6c6" />
+
+    <!-- in actual case, it will be horizontal recyclerview instead textviwe-->
+    <include
+        android:id="@+id/tagList"
+        layout="@layout/layout_tags" />
+</LinearLayout>

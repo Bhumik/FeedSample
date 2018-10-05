@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvActionDownload"
+        style="@style/actionButton"
+        android:text="Save"
+        android:visibility="gone"
+        app:icon="@drawable/ic_save"
+        app:iconPadding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvActionLike"
+        style="@style/actionButton"
+        app:icon="@drawable/ic_thumbsup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvActionComments"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="34" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvActionComments"
+        style="@style/actionButton"
+        app:icon="@drawable/ic_comments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvActionWhatsApp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="34" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvActionWhatsApp"
+        style="@style/actionButton"
+        android:visibility="gone"
+        app:icon="@drawable/ic_whatsapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvActionShare"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="34" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvActionShare"
+        style="@style/actionButton"
+        app:icon="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="34" />
+</androidx.constraintlayout.widget.ConstraintLayout>

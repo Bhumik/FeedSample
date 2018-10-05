@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyMandirDemo</string>
+    <string name="alertDefaultTitle">@string/app_name</string>
+    <string name="alertDefaultButtonText">Ok</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="count_comments">%d Comments</string>
+    <string name="count_likes">%d Likes</string>
+    <string name="count_shares">%d Shares</string>
+</resources>

@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.finalhints.mymandirdemo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$rootProject.androidXVersion"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+//    api "androidx.legacy:legacy-support-v4:$rootProject.androidXVersion"
+    api "androidx.appcompat:appcompat:$rootProject.androidXVersion"
+    api "androidx.recyclerview:recyclerview:$rootProject.androidXVersion"
+    api "com.google.android.material:material:$rootProject.googleMaterialVersion"
+
+    implementation 'com.facebook.fresco:fresco:1.10.0'
+
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpVersion"
+    api "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    api "com.squareup.retrofit2:converter-jackson:$rootProject.retrofitVersion"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion" //rxandroid
+
+    api "androidx.core:core-ktx:$rootProject.androidXVersion"
+
+    api "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.5"
+
+    api ("com.android.support:support-v4:27.1.1"){
+        exclude group: 'com.android.support'
+    }
+
+    implementation ('com.google.android.exoplayer:exoplayer-core:2.8.4') {
+        exclude group: "com.android.support"
+    }
+    //implementation 'com.google.android.exoplayer:exoplayer-dash:2.8.4'
+    implementation ('com.google.android.exoplayer:exoplayer-ui:2.8.4') {
+        exclude group: "com.android.support"
+    }
+
+/*
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+
+*/
+}
